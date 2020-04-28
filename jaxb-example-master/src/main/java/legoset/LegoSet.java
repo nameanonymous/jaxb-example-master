@@ -1,9 +1,12 @@
 package legoset;
 import album.Track;
 import lombok.*;
+import movie.YearAdapter;
+
 import java.time.Year;
 import java.util.List;
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -14,7 +17,8 @@ public class LegoSet {
 
     private String name;
     private String theme;
-    private int year;
+    @XmlJavaTypeAdapter(YearAdapter.class)
+    private Year year;
     private int pieces;
 
     @XmlElementWrapper(name = "tags")

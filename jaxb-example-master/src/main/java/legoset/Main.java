@@ -4,9 +4,9 @@ import legoset.LegoSet;
 import legoset.Minifig;
 import  legoset.Weight;
 import jaxb.JAXBHelper;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.time.Year;
 import java.util.ArrayList;
 
 public class Main {
@@ -16,7 +16,7 @@ public class Main {
         legos.setNumber("75211");
         legos.setName("Imperial TIE Fighter");
         legos.setTheme("StarWars");
-        legos.setYear(2018);
+        legos.setYear(Year.of(2018));
         legos.setPieces(549);
 
         ArrayList<Tags> tags = new ArrayList<>();
